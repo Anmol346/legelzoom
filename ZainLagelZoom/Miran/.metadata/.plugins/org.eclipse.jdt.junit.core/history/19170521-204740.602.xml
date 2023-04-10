@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Default test" tests="10" started="10" failures="1" errors="0" ignored="0">
+  <testsuite name="Default test" time="253.277">
+    <testcase name="@AfterClass CloseBrowser" classname="Zoom.legalzoom" time="0.001">
+      <failure>
+      java.lang.IllegalMonitorStateException: current thread is not owner
+at java.base/java.lang.Object.wait(Native Method)
+at Zoom.legalzoom.CloseBrowser(legalzoom.java:58)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+    </failure>
+    </testcase>
+    <testcase name="VerifyTitleOfPage" classname="Zoom.legalzoom" time="0.019"/>
+    <testcase name="FindPersonalButton" classname="Zoom.legalzoom" time="22.143"/>
+    <testcase name="ClickonPersonalInfo" classname="Zoom.legalzoom" time="4.135"/>
+    <testcase name="FillPropertyInfo" classname="Zoom.legalzoom" time="4.992"/>
+    <testcase name="TellAboutYourself" classname="Zoom.legalzoom" time="24.47"/>
+    <testcase name="PropertyCheckBoxes" classname="Zoom.legalzoom" time="109.958"/>
+    <testcase name="PlanningOptions" classname="Zoom.legalzoom" time="33.528"/>
+    <testcase name="SecureCheackOut" classname="Zoom.legalzoom" time="29.136"/>
+    <testcase name="PayemetnInformation" classname="Zoom.legalzoom" time="16.468"/>
+  </testsuite>
+</testrun>

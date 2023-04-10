@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-13T14:06:35 IST" name="Default suite" finished-at="2022-08-13T14:10:49 IST" duration-ms="253277">
+    <groups>
+    </groups>
+    <test started-at="2022-08-13T14:06:35 IST" name="Default test" finished-at="2022-08-13T14:10:49 IST" duration-ms="253277">
+      <class name="Zoom.legalzoom">
+        <test-method is-config="true" signature="InvokeBrowser()[pri:0, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:06:35 IST" name="InvokeBrowser" finished-at="2022-08-13T14:06:44 IST" duration-ms="8357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvokeBrowser -->
+        <test-method signature="VerifyTitleOfPage()[pri:0, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:06:44 IST" name="VerifyTitleOfPage" finished-at="2022-08-13T14:06:44 IST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyTitleOfPage -->
+        <test-method signature="FindPersonalButton()[pri:50, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:06:44 IST" name="FindPersonalButton" finished-at="2022-08-13T14:07:06 IST" duration-ms="22143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FindPersonalButton -->
+        <test-method signature="ClickonPersonalInfo()[pri:100, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:07:06 IST" name="ClickonPersonalInfo" finished-at="2022-08-13T14:07:10 IST" duration-ms="4135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickonPersonalInfo -->
+        <test-method signature="FillPropertyInfo()[pri:150, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:07:10 IST" name="FillPropertyInfo" finished-at="2022-08-13T14:07:15 IST" duration-ms="4992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FillPropertyInfo -->
+        <test-method signature="TellAboutYourself()[pri:200, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:07:15 IST" name="TellAboutYourself" finished-at="2022-08-13T14:07:40 IST" duration-ms="24470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TellAboutYourself -->
+        <test-method signature="PropertyCheckBoxes()[pri:250, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:07:40 IST" name="PropertyCheckBoxes" finished-at="2022-08-13T14:09:29 IST" duration-ms="109958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PropertyCheckBoxes -->
+        <test-method signature="PlanningOptions()[pri:300, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:09:29 IST" name="PlanningOptions" finished-at="2022-08-13T14:10:03 IST" duration-ms="33528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PlanningOptions -->
+        <test-method signature="SecureCheackOut()[pri:350, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:10:03 IST" name="SecureCheackOut" finished-at="2022-08-13T14:10:32 IST" duration-ms="29136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SecureCheackOut -->
+        <test-method signature="PayemetnInformation()[pri:400, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:10:32 IST" name="PayemetnInformation" finished-at="2022-08-13T14:10:49 IST" duration-ms="16468" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PayemetnInformation -->
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:Zoom.legalzoom@48f278eb]" started-at="2022-08-13T14:10:49 IST" name="CloseBrowser" finished-at="2022-08-13T14:10:49 IST" duration-ms="1" status="FAIL">
+          <exception class="java.lang.IllegalMonitorStateException">
+            <message>
+              <![CDATA[current thread is not owner]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalMonitorStateException: current thread is not owner
+at java.base/java.lang.Object.wait(Native Method)
+at Zoom.legalzoom.CloseBrowser(legalzoom.java:58)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalMonitorStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+      </class> <!-- Zoom.legalzoom -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

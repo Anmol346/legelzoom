@@ -1,0 +1,224 @@
+package Zoom;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.List;
+import java.util.Scanner;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class legalzoom {
+
+	ChromeDriver driver;
+
+	@BeforeClass
+	public void InvokeBrowser() {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\ANBARHAT\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+
+		driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.manage().deleteAllCookies();
+
+		driver.get("https://www.legalzoom.com/country/in");
+
+	}
+
+	@Test(priority = 0)
+
+	public void VerifyTitleOfPage() {
+
+		String expected_Title = "LegalZoom | Start a Business, Protect Your Family: LLC Wills Trademark Incorporate & More Online | LegalZoom";
+
+		String Actual_Title;
+
+		Actual_Title = driver.getTitle();
+
+		Assert.assertEquals(Actual_Title, expected_Title);
+
+	}
+
+	@AfterClass
+
+	public void CloseBrowser() {
+
+		System.out.println("Done.");
+
+		driver.close();
+
+		driver.quit();
+	}
+
+	@Test(priority = 50)
+
+	public void FindPersonalButton() throws InterruptedException {
+
+		WebElement personal = driver.findElement(By.id("nav-heading-personal"));
+		personal.click();
+
+		driver.findElement(By.id("nav-personal-item-3")).click();
+
+		driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("//*[@id=\"hero915-cta-button\"]")).click();
+
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("//*[@id=\"collapse1623156477351-1\"]/div/div/a")).click();
+
+		Thread.sleep(1000);
+	}
+
+	@Test(priority = 100)
+
+	public void ClickonPersonalInfo() {
+
+		System.out.println("Personal info");
+		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_btnContinue2\"]")).click();
+	}
+
+	@Test(priority = 150)
+
+	public void FillPropertyInfo() throws InterruptedException {
+
+		System.out.println("WHO IS MAKING THIS TRUST?" + "\r\n\n"
+				+ "A LegalZoom Living Trust can be made up of the property owned by just one person, a married couple, or two people not married to each other.");
+
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+
+		String scr = sc.nextLine();
+
+		String Option = scr;
+
+		switch (Option) {
+
+		case "Me only":
+			WebElement Radio1 = driver.findElement(By.xpath("//*[@id=\"chkctlgrantor_selfonly_CB\"]"));
+			Radio1.click();
+			Thread.sleep(1000);
+			break;
+
+		case "Me and my spouse":
+			WebElement Radio2 = driver.findElement(By.xpath("//*[@id=\"chkctlgrantor_cospouse_CB\"]"));
+			Radio2.click();
+			Thread.sleep(1000);
+			break;
+
+		case "Me and another person":
+			WebElement Radio3 = driver.findElement(By.xpath("//*[@id=\"chkctlgrantor_cograntor_CB\"]"));
+			Radio3.click();
+			Thread.sleep(1000);
+			break;
+
+		default:
+			System.out.println("Wrong Inputed ");
+			break;
+		}
+
+		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_btnContinue2\"]")).click();
+
+	}
+
+	@Test(priority = 200)
+
+	public void TellAboutYourself() throws InterruptedException {
+
+		driver.findElement(By.name("grantor_first|290240")).sendKeys("Add_First_Name");
+
+		driver.findElement(By.name("grantor_middle|290241")).sendKeys("Add_Middle_Name");
+
+		driver.findElement(By.name("grantor_last|290242")).sendKeys("Add_Last_Name");
+
+		driver.findElement(By.name("grantor_aka|290243")).sendKeys("Optinal_You_Can_Pass_or_not");
+
+		driver.findElement(By.name("phone_number|295550")).sendKeys("979665465");
+
+		Select select = new Select(driver.findElement(By.name("grantor_married_MC|290244")));
+
+		System.out.println("Are you Married ??");
+
+		select.selectByVisibleText("No");
+
+		Select select1 = new Select(driver.findElement(By.name("grantor_children_MC|290247")));
+
+		System.out.println("\n\n" + "Do you have children???");
+
+		select1.selectByVisibleText("No");
+
+		Select select2 = new Select(driver.findElement(By.name("PetOwner|298228")));
+
+		System.out.println("\n\n" + "Do you have any pets? ??");
+
+		select2.selectByVisibleText("No");
+
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_btnContinue2\"]")).click();
+
+		driver.findElement(By.name("grantor_address|290261")).sendKeys("Your_add");
+		driver.findElement(By.name("grantor_city|290262")).sendKeys("city_name");
+		driver.findElement(By.name("grantor_county|290263")).sendKeys("country");
+
+		Select slr = new Select(driver.findElement(By.name("grantor_state|290264")));
+		slr.selectByVisibleText("Maine");
+
+		driver.findElement(By.name("grantor_zip|290526")).sendKeys("443342");
+
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_btnContinue2\"]")).click();
+
+		Thread.sleep(1000);
+
+		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_btnContinue2\"]")).click();
+
+	}
+
+}
+
+	@Test(priority = 250)
+
+	public void PropertyCheckBoxes() {
+
+		WebElement Radio3 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_realestate_CB\"]"));
+		Radio3.click();
+
+		WebElement Radio4 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_accounts_CB\"]"));
+		Radio4.click();
+
+		WebElement Radio5 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_stocks_CB\"]"));
+		Radio5.click();
+
+		WebElement Radio6 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_business_CB\"]"));
+		Radio6.click();
+
+		WebElement Radio7 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_business_CB\"]"));
+		Radio7.click();
+
+		WebElement Radio8 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_contracts_CB\"]"));
+		Radio8.click();
+
+		WebElement Radio9 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_insurance_CB\"]"));
+		Radio9.click();
+
+		WebElement Radio10 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_retirement_CB\"]"));
+		Radio10.click();
+
+		WebElement Radio11 = driver.findElement(By.xpath("//*[@id=\"chkctlproperty_personal_CB\"]"));
+		Radio11.click();
+
+		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_btnContinue2\"]")).click();
+
+	}
+
+}
