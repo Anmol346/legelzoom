@@ -19,7 +19,7 @@ public class legalzoom {
 
 		// CromeDriver Path ...................
 
-		System.setProperty("webdriver.chrome.driver","E:\\Only Crome download\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","E:\\ Crome download\\chromedriver_win32\\chromedriver.exe");
 
 		driver = new ChromeDriver();
 
